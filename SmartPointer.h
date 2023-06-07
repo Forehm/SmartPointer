@@ -5,7 +5,6 @@
 
 namespace forehm
 {
-
     template <typename T>
     class SmartPointer 
     {
@@ -65,6 +64,5 @@ namespace forehm
     private:
         T* ptr_ = nullptr;
     };
-
 }
 
