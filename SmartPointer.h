@@ -7,18 +7,21 @@ namespace forehm
 {
 
     template <typename T>
-    class SmartPointer {
+    class SmartPointer 
+    {
     public:
         SmartPointer() = default;
 
         explicit SmartPointer(T* raw_ptr) noexcept
-            : ptr_(raw_ptr) {
+            : ptr_(raw_ptr) 
+        {
         }
 
 
         SmartPointer(const SmartPointer&) = delete;
 
-        ~SmartPointer() {
+        ~SmartPointer() 
+        {
             delete ptr_;
         }
 
