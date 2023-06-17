@@ -5,7 +5,7 @@
 
 namespace forehm
 {
-    template <typename T>
+    template <typename Type>
     class SmartPointer 
     {
     public:
