@@ -29,9 +29,9 @@ namespace forehm
             return ptr_;
         }
 
-        T* Release() noexcept 
+        Type* Release() noexcept 
         {
-            T* p = ptr_;
+            Type* p = ptr_;
             ptr_ = nullptr;
             return p;
         }
@@ -41,7 +41,7 @@ namespace forehm
             return ptr_ != nullptr;
         }
 
-        T* operator->() const 
+        Type* operator->() const 
         {
             using namespace std::literals;
             if (!ptr_) 
@@ -51,7 +51,7 @@ namespace forehm
             return ptr_;
         }
 
-        T& operator*() const 
+        Type& operator*() const 
         {
             using namespace std::literals;
             if (!ptr_) 
@@ -62,7 +62,7 @@ namespace forehm
         }
 
     private:
-        T* ptr_ = nullptr;
+        Type* ptr_ = nullptr;
     };
 }
 
