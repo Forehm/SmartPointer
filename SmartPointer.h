@@ -11,7 +11,7 @@ namespace forehm
     public:
         SmartPointer() = default;
 
-        explicit SmartPointer(T* raw_ptr) noexcept
+        explicit SmartPointer(Type* raw_ptr) noexcept
             : ptr_(raw_ptr) 
         {
         }
@@ -24,7 +24,7 @@ namespace forehm
             delete ptr_;
         }
 
-        T* GetRawPtr() const noexcept 
+        Type* GetRawPtr() const noexcept 
         {
             return ptr_;
         }
