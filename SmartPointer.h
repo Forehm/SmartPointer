@@ -18,11 +18,6 @@ namespace forehm
         {
         }
 
-        ~SmartPointer() 
-        {
-            delete ptr_;
-        }
-
         Type* GetRawPtr() const noexcept 
         {
             return ptr_;
@@ -58,6 +53,11 @@ namespace forehm
                 throw std::logic_error("Scoped ptr is null"s);
             }
             return *ptr_;
+        }
+
+        ~SmartPointer() 
+        {
+            delete ptr_;
         }
 
     private:
