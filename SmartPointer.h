@@ -11,13 +11,14 @@ namespace forehm
     public:
         SmartPointer() = default;
 
+        SmartPointer(const SmartPointer&) = delete;
+
         explicit SmartPointer(Type* raw_ptr) noexcept
             : ptr_(raw_ptr) 
         {
         }
 
 
-        SmartPointer(const SmartPointer&) = delete;
 
         ~SmartPointer() 
         {
