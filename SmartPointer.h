@@ -18,8 +18,6 @@ namespace forehm
         {
         }
 
-
-
         ~SmartPointer() 
         {
             delete ptr_;
