@@ -61,6 +61,7 @@ namespace forehm
         }
 
     private:
+
         Type* ptr_ = nullptr;
     };
 }
